@@ -19,7 +19,7 @@
               appName: "DwAR",
               customerId: "4",
               campaignName: "TATA",
-              serverUrl: "https://staging.lttl.in/event"
+              serverUrl: "https://lttl.in/event"
           }
        );
 
@@ -130,12 +130,12 @@
   const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
   scene.add(light);
 
-  const loadFont = () => {
+  const loadFont = (fontURL) => {
     return new Promise((resolve, reject) => {
       const loader = new THREE.FontLoader();
 
       loader.load(
-        "https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/fonts/helvetiker_regular.typeface.json",
+        fontURL,
         (font) => {
           resolve(font); // Resolve the promise with the loaded font
         },
@@ -147,94 +147,100 @@
     });
   };
 
-  const font = await loadFont();
-  
-
   
     
-      const image_6db67eb8_7c3cfdc9_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_6db67eb8_7c3cfdc9_texture = await loadTexture("assets/image 242 (1).png");
-  const image_6db67eb8_7c3cfdc9_image = new THREE.MeshBasicMaterial({
-      map: image_6db67eb8_7c3cfdc9_texture,
+      const image_6db67eb8_7c3ab0bc_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_6db67eb8_7c3ab0bc_texture = await loadTexture("assets/image 242 (1).png");
+  const image_6db67eb8_7c3ab0bc_image = new THREE.MeshBasicMaterial({
+      map: image_6db67eb8_7c3ab0bc_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const image_6db67eb8_7c3cfdc9 = new THREE.Mesh(image_6db67eb8_7c3cfdc9_iconGeometry, image_6db67eb8_7c3cfdc9_image);
-    image_6db67eb8_7c3cfdc9.scale.set(0.2, 0.2, 0.2);
-    image_6db67eb8_7c3cfdc9.position.set(0, -0.5, 0.04);
-    image_6db67eb8_7c3cfdc9.rotation.set(-0.001, 0, 0);
-    image_6db67eb8_7c3cfdc9.userData.clickable = true
+    const image_6db67eb8_7c3ab0bc = new THREE.Mesh(image_6db67eb8_7c3ab0bc_iconGeometry, image_6db67eb8_7c3ab0bc_image);
+    image_6db67eb8_7c3ab0bc.scale.set(0.2, 0.2, 0.2);
+    image_6db67eb8_7c3ab0bc.position.set(0, -0.5, 0.04);
+    image_6db67eb8_7c3ab0bc.rotation.set(0, 0, 0);
+    image_6db67eb8_7c3ab0bc.userData.clickable = true
     
-    image_6db67eb8_7c3cfdc9.userData.eventName ="Blinkit"
-const image_77709c62_94cd5e60_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_77709c62_94cd5e60_texture = await loadTexture("assets/image 243.png");
-  const image_77709c62_94cd5e60_image = new THREE.MeshBasicMaterial({
-      map: image_77709c62_94cd5e60_texture,
+    image_6db67eb8_7c3ab0bc.userData.eventName ="Blinkit"
+const image_77709c62_94cb00f0_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_77709c62_94cb00f0_texture = await loadTexture("assets/image 243.png");
+  const image_77709c62_94cb00f0_image = new THREE.MeshBasicMaterial({
+      map: image_77709c62_94cb00f0_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const image_77709c62_94cd5e60 = new THREE.Mesh(image_77709c62_94cd5e60_iconGeometry, image_77709c62_94cd5e60_image);
-    image_77709c62_94cd5e60.scale.set(0.2, 0.2, 0.2);
-    image_77709c62_94cd5e60.position.set(0.37, -0.498, 0.04);
-    image_77709c62_94cd5e60.rotation.set(-0.001, 0, 0);
-    image_77709c62_94cd5e60.userData.clickable = true
+    const image_77709c62_94cb00f0 = new THREE.Mesh(image_77709c62_94cb00f0_iconGeometry, image_77709c62_94cb00f0_image);
+    image_77709c62_94cb00f0.scale.set(0.2, 0.2, 0.2);
+    image_77709c62_94cb00f0.position.set(0.37, -0.498, 0.04);
+    image_77709c62_94cb00f0.rotation.set(0, 0, 0);
+    image_77709c62_94cb00f0.userData.clickable = true
     
-    image_77709c62_94cd5e60.userData.eventName ="Flipkart"
-const image_3b5710c2_b4983e48_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_3b5710c2_b4983e48_texture = await loadTexture("assets/image 244.png");
-  const image_3b5710c2_b4983e48_image = new THREE.MeshBasicMaterial({
-      map: image_3b5710c2_b4983e48_texture,
+    image_77709c62_94cb00f0.userData.eventName ="Flipkart"
+const image_3b5710c2_b49805ab_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_3b5710c2_b49805ab_texture = await loadTexture("assets/image 244.png");
+  const image_3b5710c2_b49805ab_image = new THREE.MeshBasicMaterial({
+      map: image_3b5710c2_b49805ab_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const image_3b5710c2_b4983e48 = new THREE.Mesh(image_3b5710c2_b4983e48_iconGeometry, image_3b5710c2_b4983e48_image);
-    image_3b5710c2_b4983e48.scale.set(0.2, 0.2, 0.2);
-    image_3b5710c2_b4983e48.position.set(-0.37, -0.5, 0.04);
-    image_3b5710c2_b4983e48.rotation.set(-0.001, 0, 0);
-    image_3b5710c2_b4983e48.userData.clickable = true
+    const image_3b5710c2_b49805ab = new THREE.Mesh(image_3b5710c2_b49805ab_iconGeometry, image_3b5710c2_b49805ab_image);
+    image_3b5710c2_b49805ab.scale.set(0.2, 0.2, 0.2);
+    image_3b5710c2_b49805ab.position.set(-0.37, -0.5, 0.04);
+    image_3b5710c2_b49805ab.rotation.set(0, 0, 0);
+    image_3b5710c2_b49805ab.userData.clickable = true
     
-    image_3b5710c2_b4983e48.userData.eventName ="Amazon"
-const target_imageundefi054fa_iconGeometry = new THREE.PlaneGeometry(1, 0.6333333333333333);
-   const target_imageundefi054fa_texture = await loadTexture("assets/sanjeev kapoor tata sampann.png");
-  const target_imageundefi054fa_image = new THREE.MeshBasicMaterial({
-      map: target_imageundefi054fa_texture,
+    image_3b5710c2_b49805ab.userData.eventName ="Amazon"
+const target_imagesanjee1a65b_iconGeometry = new THREE.PlaneGeometry(1, 0.6333333333333333);
+   const target_imagesanjee1a65b_texture = await loadTexture("assets/sanjeev kapoor tata sampann.png");
+  const target_imagesanjee1a65b_image = new THREE.MeshBasicMaterial({
+      map: target_imagesanjee1a65b_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const target_imageundefi054fa = new THREE.Mesh(target_imageundefi054fa_iconGeometry, target_imageundefi054fa_image);
-    target_imageundefi054fa.scale.set(1, 1, 1);
-    target_imageundefi054fa.position.set(0.01, -0.01, 0.01);
-    target_imageundefi054fa.rotation.set(-0.001, 0, 0);
+    const target_imagesanjee1a65b = new THREE.Mesh(target_imagesanjee1a65b_iconGeometry, target_imagesanjee1a65b_image);
+    target_imagesanjee1a65b.scale.set(1, 1, 1);
+    target_imagesanjee1a65b.position.set(0.01, -0.01, 0.01);
+    target_imagesanjee1a65b.rotation.set(-0.001, 0, 0);
     
     
     
 
-    const video_asset_45541dbf34b_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
+    const video_asset_45541d8e5c0_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
 
-    const video_asset_45541dbf34b_Item0Video = await loadVideo("assets/Tata Sampann Masale with Natural Oils.mp4");
+    const video_asset_45541d8e5c0_Item0Video = await loadVideo("assets/Tata Sampann Masale with Natural Oils.mp4");
 
-    const video_asset_45541dbf34b_Item0VideoTexture = new THREE.VideoTexture(
-      video_asset_45541dbf34b_Item0Video
+    const video_asset_45541d8e5c0_Item0VideoTexture = new THREE.VideoTexture(
+      video_asset_45541d8e5c0_Item0Video
     );
 
-    let video_asset_45541dbf34b_Item0VideoMaterial
+    let video_asset_45541d8e5c0_Item0VideoMaterial
 
-      video_asset_45541dbf34b_Item0VideoMaterial = new THREE.MeshBasicMaterial({
-          map: video_asset_45541dbf34b_Item0VideoTexture,
+      video_asset_45541d8e5c0_Item0VideoMaterial = new THREE.MeshBasicMaterial({
+          map: video_asset_45541d8e5c0_Item0VideoTexture,
+          transparent:true
         })
     
-     const video_asset_45541dbf34b = new THREE.Mesh(
-      video_asset_45541dbf34b_planeGeometry,
-      video_asset_45541dbf34b_Item0VideoMaterial
+     const video_asset_45541d8e5c0 = new THREE.Mesh(
+      video_asset_45541d8e5c0_planeGeometry,
+      video_asset_45541d8e5c0_Item0VideoMaterial
     );
 
-  video_asset_45541dbf34b.position.set(0, 0, 0);
+  video_asset_45541d8e5c0.position.set(0, 0, 0);
 
 
 
   if (isIOS) {
-    video_asset_45541dbf34b_Item0Video.muted=isIOS
+    video_asset_45541d8e5c0_Item0Video.muted=isIOS
     muteIconMesh = await loadUnmuteLogo();
     anchor.group.add(muteIconMesh);
   }
 
-  video_asset_45541dbf34b_Item0Video.loop=true;
+  video_asset_45541d8e5c0_Item0Video.loop=true;
   
-  video_asset_45541dbf34b.scale.set(1.2, 1.2, 1.2);
+  video_asset_45541d8e5c0.scale.set(1.2, 1.2, 1.2);
 
-    video_asset_45541dbf34b.rotation.set(-0.002, 0, 0);
+    video_asset_45541d8e5c0.rotation.set(0, 0, 0);
 
     
   
@@ -270,7 +276,7 @@ const target_imageundefi054fa_iconGeometry = new THREE.PlaneGeometry(1, 0.633333
 
         if(isIOS){ 
           if (o.userData.clickable && o === muteIconMesh) {
-            video_asset_45541dbf34b_Item0Video.muted=false
+            video_asset_45541d8e5c0_Item0Video.muted=false
     
             anchor.group.remove(muteIconMesh);
             return true;
@@ -283,21 +289,21 @@ const target_imageundefi054fa_iconGeometry = new THREE.PlaneGeometry(1, 0.633333
       if (o.userData.clickable) window.showLoadingScreen();
 
       
-      if (o.userData.clickable && o === image_6db67eb8_7c3cfdc9) {
+      if (o.userData.clickable && o === image_6db67eb8_7c3ab0bc) {
         setTimeout(()=>{
           window.location.href = "https://blinkit.com/s/?q=tata%20sampann%20masala"
         },100)
         }
       
 
-      if (o.userData.clickable && o === image_77709c62_94cd5e60) {
+      if (o.userData.clickable && o === image_77709c62_94cb00f0) {
         setTimeout(()=>{
           window.location.href = "https://www.flipkart.com/search?q=tata%20samapann%20masala&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
         },100)
         }
       
 
-      if (o.userData.clickable && o === image_3b5710c2_b4983e48) {
+      if (o.userData.clickable && o === image_3b5710c2_b49805ab) {
         setTimeout(()=>{
           window.location.href = "https://www.amazon.in/s?k=tata+sampann+masala&crid=MK2272W8BN6U&sprefix=tata+sampann+Masa%2Caps%2C241&ref=nb_sb_ss_ts-doa-p_1_17"
         },100)
@@ -308,11 +314,11 @@ const target_imageundefi054fa_iconGeometry = new THREE.PlaneGeometry(1, 0.633333
     })
     
       
-    anchor.group.add(image_6db67eb8_7c3cfdc9)
-anchor.group.add(image_77709c62_94cd5e60)
-anchor.group.add(image_3b5710c2_b4983e48)
+    anchor.group.add(image_6db67eb8_7c3ab0bc)
+anchor.group.add(image_77709c62_94cb00f0)
+anchor.group.add(image_3b5710c2_b49805ab)
 
-anchor.group.add(video_asset_45541dbf34b)
+anchor.group.add(video_asset_45541d8e5c0)
 
 
     anchor.onTargetFound = () => {
@@ -331,12 +337,12 @@ anchor.group.add(video_asset_45541dbf34b)
 
 
      
-      video_asset_45541dbf34b_Item0Video.play();
+      video_asset_45541d8e5c0_Item0Video.play();
     };
 
 
     anchor.onTargetLost = () => {
-       video_asset_45541dbf34b_Item0Video.pause();
+       video_asset_45541d8e5c0_Item0Video.pause();
 
         
 
